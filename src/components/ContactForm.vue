@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="teal--text">New Contact</h3>
-    <v-form>
+    <v-form @submit.prevent="handleSubmit">
       <v-text-field outlined label="First Name" v-model="form.firstName" />
       <v-text-field outlined label="Last Name" v-model="form.lastName" />
       <v-text-field type="number" outlined label="Phone" v-model="form.phone" />
@@ -13,27 +13,27 @@
       />
       <v-text-field outlined label="Email" v-model="form.email" />
       <v-btn type="submit" color="teal" dark>Submit</v-btn>
-      <v-form @submit.prevent="handleSubmit"></v-form>
     </v-form>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    handleSubmit() {
+      this.$emit("contact-submit", this.form);
+
+      this.form = {
+        firstName: "",
+        lastName: "",
+        phone: "",
+        type: "",
+        email: "",
+      };
+    },
+  },
   data() {
     return {
-      methods: {
-        handleSubmit() {
-          this.$emit("contact-submit", this.form);
-          this.form = {
-            firstName: "",
-            lastName: "",
-            phone: "",
-            type: "",
-            email: "",
-          };
-        },
-      },
       form: {
         firstName: "",
         lastName: "",
