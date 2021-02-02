@@ -19,7 +19,7 @@
         outlined
         label="Phone"
         v-model="form.phone"
-        :rules="form.phone"
+        :rules="validators.phone"
       />
       <v-select
         outlined
@@ -31,7 +31,7 @@
         outlined
         label="Email"
         v-model="form.email"
-        :rules="form.email"
+        :rules="validators.email"
       />
       <v-btn type="submit" color="teal" dark>Submit</v-btn>
     </v-form>
