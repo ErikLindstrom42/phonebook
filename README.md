@@ -1,14 +1,14 @@
 
 
 # phonebook
-Simple project to learn a bit of vue.
+Simple project to learn a bit of vue. 
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development default is localhost:8080
 ```
 npm run serve
 ```
