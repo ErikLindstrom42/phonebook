@@ -1,4 +1,7 @@
+
+
 # phonebook
+Simple project to learn a bit of vue.
 
 ## Project setup
 ```
